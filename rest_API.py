@@ -38,7 +38,6 @@ def lista_devs():
         dados = json.loads(request.data)
         posicao = len(devs)
         dados['id'] = posicao
-
         devs.append(dados)
         return jsonify(devs[posicao])
     elif request.method == 'GET':
